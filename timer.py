@@ -1,4 +1,4 @@
-import time, pygame
+import time, pygame, subprocess
 from sys import argv
 
 pygame.init()
@@ -23,6 +23,10 @@ else:
      print "unit must be 's', 'm', 'h', or 'd'"
 
 time.sleep(sec)
+
+#this opens a separate terminal window, says "Ding!", and then uses "exec bash" to keep the window open
+subprocess.call(['gnome-terminal', '-e', 'bash -c "echo "Ding!"; exec bash"'])
+
 pygame.mixer.music.play()
 time.sleep(0.4)
 
