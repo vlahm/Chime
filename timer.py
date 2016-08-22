@@ -20,7 +20,7 @@ elif unit == 'd':
     sec = wait * 60 * 60 * 24
 
 else:
-     print "unit must be 's', 'm', 'h', or 'd'"
+     print("unit must be 's', 'm', 'h', or 'd'")
 
 time.sleep(sec)
 
