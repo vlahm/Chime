@@ -1,0 +1,24 @@
+Metadata-Version: 1.1
+Name: chime
+Version: 1.0.0
+Summary: Set alarms and reminders from GNOME Terminal
+Home-page: https://github.com/vlahm/chime
+Author: Mike Vlah
+Author-email: vlahm13@gmail.com
+License: GPL-3
+Description: Open a terminal window and call chime with the
+            number of hours, minutes, and/or seconds to wait before it dings.
+            Optionally, set a reminder message.  The program can be made to work even
+            if you close its terminal, though it will be cancelled if you log off or
+            shut down your computer.
+Keywords: desktop,tools,utility,timer
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: X11 Applications :: Gnome
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Framework :: Setuptools Plugin
+Classifier: Topic :: Desktop Environment :: Gnome
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 2.7

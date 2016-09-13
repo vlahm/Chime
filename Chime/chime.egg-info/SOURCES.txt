@@ -1,0 +1,8 @@
+setup.py
+chime/__init__.py
+chime/timer.py
+chime.egg-info/PKG-INFO
+chime.egg-info/SOURCES.txt
+chime.egg-info/dependency_links.txt
+chime.egg-info/requires.txt
+chime.egg-info/top_level.txt
