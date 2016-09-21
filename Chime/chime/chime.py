@@ -11,9 +11,9 @@ if len(argv) > 2:
 else:
     reminder = 'No reminder message'
 
-# parse duration string and convert to seconds
 hms = [None]*3
 
+# parse duration string and convert to seconds
 x = re.search(r'[hms]', dur)
 if x is None:
     sys.exit("Supply hours, mins, and/or secs in the form 'xhxmxs', where "
@@ -28,8 +28,8 @@ hms = [0 if x is None else int(x) for x in hms]
 if hms == [0,0,0]:
     sys.exit("Supply hours,w mins, and/or secs in the form 'xhxmxs', where "
     "each 'x' is numeric. No quotes needed.")
-   
-print 'Timing for %s hour(s), %s minute(s), and %s second(s).' % tuple(hms)
+
+print('Timing for %s hour(s), %s minute(s), and %s second(s).' % tuple(hms))
 
 wait_time = 3600*hms[0] + 60*hms[1] + hms[2]
 time.sleep(wait_time)
@@ -40,11 +40,11 @@ gnome_command = "bash -c \"echo -e 'Ding!\\n%s'; exec bash\"" % reminder
 subprocess.call(['gnome-terminal', '-e', gnome_command])
 
 # remove dumpfile
-dumpfile = abspath("/home/mike/git/funcs/timer/simple_timer/nohup.out")
-try:
-    os.remove(dumpfile)
-except OSError:
-    pass
+dumpfile = abspath("/home/mike/git/funcs/Chime/chime/nohup.out")
+#try:
+#    os.remove(dumpfile)
+#except OSError:
+#    pass
 
 bell.play()
 time.sleep(0.7)
