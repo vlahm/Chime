@@ -1,0 +1,4 @@
+include README.rst
+include chime/bicycle_bell.wav
+include LICENSE.txt
+

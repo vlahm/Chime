@@ -1,6 +1,9 @@
+LICENSE.txt
+MANIFEST.in
 setup.py
 chime/__init__.py
-chime/timer.py
+chime/bicycle_bell.wav
+chime/chime.py
 chime.egg-info/PKG-INFO
 chime.egg-info/SOURCES.txt
 chime.egg-info/dependency_links.txt

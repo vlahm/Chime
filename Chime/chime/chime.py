@@ -1,12 +1,13 @@
 from sys import argv
 from time import sleep
 from sys import exit
-from os.path import abspath
+from os.path import realpath
 import pyglet, re, subprocess
 import threading
 
-bellpath = abspath("/home/mike/func_tools/bicycle_bell.wav")
-bell = pyglet.media.load(bellpath)
+path = realpath(__file__)
+chimedir = re.match(r'(.*)chime.py', path).group(1)
+bell = pyglet.media.load(''.join([chimedir,'bicycle_bell.wav']))
 
 script_name, dur = argv[0:2]
 if len(argv) > 2:
@@ -44,18 +45,10 @@ def timer():
     gnome_command = "bash -c \"echo -e 'Ding!\\n%s'; exec bash\"" % reminder
     subprocess.call(['gnome-terminal', '-e', gnome_command])
     
-    # remove dumpfile
-    dumpfile = abspath("/home/mike/git/funcs/Chime/chime/nohup.out")
-    #try:
-    #    os.remove(dumpfile)
-    #except OSError:
-    #    pass
-    
     bell.play()
     sleep(0.7)
 
 t1 = threading.Thread(target=timer)
 t2 = threading.Thread(target=print_message)
-#t1.setDaemon(True)
 t1.start()
 t2.start()
