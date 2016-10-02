@@ -39,7 +39,7 @@
 ~~~~~~~~~~~~~~~~~~~
 | All you need is: ``pip install chime``
 
-| If for some reason that doesn't work...
+| If for some reason that doesn't work (e.g. bell sound is not audible)...
 
 1. Navigate to
    https://github.com/vlahm/linux_utils/tree/master/Chime/dist
