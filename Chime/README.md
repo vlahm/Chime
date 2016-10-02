@@ -11,7 +11,7 @@ if you close its terminal.
 ### **Contents**
 1. Requirements
 2. Installation
-3. How to use
+3. Usage
   1. Basic (using `python` command from shell)
   2. Run from anywhere with alias
   3. Run from anywhere as daemon (independent of shell instance)
@@ -28,15 +28,16 @@ Works with Python 2 or 3.
 1. Navigate to [https://github.com/vlahm/linux_utils/tree/master/Chime/dist](https://github.com/vlahm/linux_utils/tree/master/Chime/dist)
 2. Right-click `chime-1.0.0.tar.gz` and save link to desired location.
 3. Navigate to the folder where you saved the tarball, then execute:
+
   ```
-  tar -xzvf chime-1.0.0.tar.gz
-  pip install chime-1.0.0/
+  tar -xzvf chime-1.0.0.tar.gz  
+  pip install chime-1.0.0/  
   ```
   (The slash is important in the above command.)
 
 ---
-### **3. How to use**
-Chime takes two arguments, a duration and an error message.  The duration is specified as a single string containing a number followed by ‘h’, ‘m’, or ‘s’, for ‘hours’, ‘minutes’, or ‘seconds’. You can also combine units, as in '1h20m3s'. The error message is a separate string, which will be returned when the time is up.
+### **3. Usage**
+Chime takes two arguments: a duration and an error message.  The duration is specified as a single string containing a number followed by ‘h’, ‘m’, or ‘s’, for ‘hours’, ‘minutes’, or ‘seconds’. You can also combine units, as in '1h20m3s'. The error message is a separate string, which is returned when the time is up.
 
 #### 1. Basic (using `python` command from shell)
 `python path/to/chime.py <duration> <reminder message>`  
