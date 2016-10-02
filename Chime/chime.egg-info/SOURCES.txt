@@ -1,5 +1,6 @@
 LICENSE.txt
 MANIFEST.in
+README.rst
 setup.py
 chime/__init__.py
 chime/bicycle_bell.wav

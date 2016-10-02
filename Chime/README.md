@@ -25,6 +25,10 @@ Works with Python 2 or 3.
 
 ---
 ### **2. Installation**
+All you need is: `pip install chime`
+
+If for some reason that doesn't work...
+
 1. Navigate to [https://github.com/vlahm/linux_utils/tree/master/Chime/dist](https://github.com/vlahm/linux_utils/tree/master/Chime/dist)
 2. Right-click `chime-1.0.0.tar.gz` and save link to desired location.
 3. Navigate to the folder where you saved the tarball, then execute:
