@@ -1,3 +1,5 @@
+#! /home/mike/anaconda3/envs/python3/bin/python
+
 from sys import argv
 from time import sleep
 from sys import exit
