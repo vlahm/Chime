@@ -84,5 +84,6 @@ It will now be safe to exit the terminal.
 ### **4. Contact the author**
 Mike Vlah: 
 + vlahm13@gmail[dot]com
++ [https://github.com/vlahm](https://github.com/vlahm)
 + [linkedin.com/in/michaelvlah](linkedin.com/in/michaelvlah)
 
