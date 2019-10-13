@@ -6,10 +6,13 @@ from sys import exit
 from os.path import realpath
 import pyglet, re, subprocess
 import threading
+import os
 
 path = realpath(__file__)
 chimedir = re.match(r'(.*)chime.py', path).group(1)
-bell = pyglet.media.load(''.join([chimedir,'bicycle_bell.wav']))
+bell = pyglet.media.load(''.join([chimedir, 'bicycle_bell.wav']))
+# bell = pyglet.media.load('/home/mike/git/Chime/Chime/chime/bicycle_bell.wav')
+# dur='3s'; reminder='arse'
 
 script_name, dur = argv[0:2]
 if len(argv) > 2:
@@ -42,11 +45,11 @@ def timer():
     wait_time = 3600*hms[0] + 60*hms[1] + hms[2]
     sleep(wait_time)
 
-    # open a new terminal window and print reminder 
+    # open a new terminal window and print reminder
     # 'exec bash' keeps the window open
-    gnome_command = "bash -c \"echo -e 'Ding!\\n%s'; exec bash\"" % reminder
-    subprocess.call(['gnome-terminal', '-e', gnome_command])
-    
+    # os.system("gnome-terminal -- /bin/bash -c \"echo -e 'Ding!\\n%s\\n'; exec /bin/bash\"" % reminder)
+    os.system("notify-send '%s'" % reminder)
+
     bell.play()
     sleep(0.7)
 
