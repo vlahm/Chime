@@ -3,15 +3,14 @@ from setuptools import setup, find_packages
 setup(
     name='chime',
 
-    version='1.0.0',
+    version='1.0.1',
 
-    description='Set alarms and reminders from GNOME Terminal',
+    description='Set alarms and reminders from terminal',
 
     long_description = '''Open a terminal window and call chime with the
     number of hours, minutes, and/or seconds to wait before it dings.
-    Optionally, set a reminder message.  The program can be made to work even
-    if you close its terminal, though it will be cancelled if you log off or
-    shut down your computer.''',
+    Optionally, set a reminder message.
+    e.g.: chime 1h30m "check oven"''',
 
     url='https://github.com/vlahm/chime',
 
@@ -37,6 +36,8 @@ setup(
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
 
     ],
 
